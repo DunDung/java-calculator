@@ -12,6 +12,7 @@ public enum Calculation {
         return num1 / num2;
     });
 
+    private static final int ZERO = 0;
     private static final String CAN_NOT_DIVIDE_ZERO = "0으로 나눌 수 없습니다.";
     private static final String NO_MATCHING_OPERATOR = "일치하는 연산자가 없습니다.";
 
@@ -24,7 +25,7 @@ public enum Calculation {
     }
 
     private static void validDivideZero(double secondOperand) {
-        if (secondOperand == 0) {
+        if (secondOperand == ZERO) {
             throw new IllegalArgumentException(CAN_NOT_DIVIDE_ZERO);
         }
     }

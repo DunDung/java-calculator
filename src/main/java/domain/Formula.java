@@ -28,13 +28,13 @@ public class Formula {
         try {
             Integer.parseInt(number);
         } catch (NumberFormatException e) {
-            throw new IllegalArgumentException(String.format(NOT_NUMBER ,number));
+            throw new IllegalArgumentException(String.format(NOT_NUMBER, number));
         }
     }
 
     private void validOperator(String operator) {
        if (!OPERATORS.contains(operator)) {
-           throw new IllegalArgumentException(String.format(WRONG_OPERATOR ,operator));
+           throw new IllegalArgumentException(String.format(WRONG_OPERATOR, operator));
        }
     }
 

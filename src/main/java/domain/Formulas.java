@@ -16,7 +16,8 @@ public class Formulas {
 
     public Queue<String> getOperators() {
         Queue<String> operators = new LinkedList<>();
-        for (int index = 1; index < formulas.size(); index += OPERATOR_INDEX_VALUE) {
+        int formulasSize = formulas.size();
+        for (int index = 1; index < formulasSize; index += OPERATOR_INDEX_VALUE) {
             operators.add(formulas.get(index));
         }
         return operators;
